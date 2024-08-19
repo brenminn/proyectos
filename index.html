@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/pata.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Book</title>
+    
+</head>
+<body>
+     <!-- header -->
+     <header>
+        <div class="header">
+            <img class="logo" src="" alt="">
+            <h3 class="title" id="home">Brenda Miranda</h3>
+        </div>
+
+        <div class="nav">
+            <a class="item" href="#home"> Home</a>
+            <a class="item" href="#gallery"> Proyectos</a>
+            <a class="item" href="#footer"> Contacto</a>
+        </div>
+    </header>
+
+    <!-- Section 1-->
+    <section class="section1">
+        <div class="bg-img">
+            <h1>Proyectos</h1>
+            <p>2024</p>
+                <a  class="item" id="book" href="#gallery">
+                    Ver
+                </a>
+        </div>
+    </section>
+
+    <!--Section 2-->
+    <section class="section2">   
+        <div class="item1">
+            <img src="img\sparkle.png" alt="">
+        </div>
+    </section>
+    
+    <!--Section 3-->
+    <section id="gallery">
+        <div class="gallery-container">
+            <img class="ImgThumbnail" src="img/website1.png" />
+            <img class="ImgThumbnail" src="img/website2.png" />
+            <img class="ImgThumbnail" src="img/website3.png" />
+
+    <!-- The Modal -->
+        <div class="modal">
+            <span class="close">&times;</span>
+                <img class="modalImage" id="img01" />
+        </div>
+        <div class="links">
+            <a class="link" href="https://brenmir.github.io/PasteleriaCliente/">Proyecto Pastelería</a>
+            <a class="link" href="https://brenmir.github.io/Vacunacion/">Proyecto Vacunación</a>
+            <a class="link" href="https://moshimoshi666.com">Página MoshiMoshi</a>
+        </div>
+
+        <script>
+            var modalEle = document.querySelector(".modal");
+            var modalImage = document.querySelector(".modalImage");
+            Array.from(document.querySelectorAll(".ImgThumbnail")).forEach(item => {
+                item.addEventListener("click", event => {
+                    modalEle.style.display = "block";
+                    modalImage.src = event.target.src;
+                });
+            });
+            document.querySelector(".close").addEventListener("click", () => {
+                modalEle.style.display = "none";
+            });
+            </script>
+        </div>
+            <!-- footer  -->
+<footer id="footer">
+    <div class="f1">
+        <h3>Contacto</h3>
+        <p>Brenda Miranda<br>
+            Diseñadora gráfica Jr. <br>
+            e-mail: bemin.0425@gmail.com
+        </p>
+        
+    </div>
+    <div class="f2">
+        <div class="snsimg">
+            <a href="https://www.linkedin.com/in/brenmir0425/" target="_blank">  
+            <img class="sns" src="img/linkedin.png" alt="img">
+            </a>
+            <a href="https://github.com/brenmir" target="_blank">  
+            <img class="sns" src="img/github.png" alt="img">
+            </a>
+        </div>
+    </div>
+</footer>
+
+<div class="copyright">
+    by ©  <a href="https://github.com/brenmir" target="_blank">
+        Bren Miranda </a>| 2023
+</div>
+      
+</body>
+</html>
+
